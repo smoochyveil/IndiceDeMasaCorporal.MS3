@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Imc.Maui.Views.MainPage"
+             Title="Indice de masa corporal">
+
+    <VerticalStackLayout
+        Padding="18"
+        Spacing="8">
+       
+        <Border>
+            <VerticalStackLayout
+                Padding="24">
+                <Label
+                    Text="proporcione el peso en kilogramos: "/>
+                <Entry 
+                    BackgroundColor="WhiteSmoke"
+                     x:Name="PesoEntry"/>
+                <Label
+                    Text="proporcione la complexion en metros: "/>
+                <Entry
+                    BackgroundColor="WhiteSmoke"
+                       x:Name="AlturaEntry"/>
+            </VerticalStackLayout>            
+        </Border>
+        <HorizontalStackLayout
+            Spacing="24"
+            HorizontalOptions="Center">
+            <Button
+                Text="calcular"
+                BackgroundColor="Green"
+                Clicked="OnCalcularButtonClicked"/>
+            <Button
+                Text="limpiar"
+                Clicked="OnLimpiarButtonClicked"/>
+
+        </HorizontalStackLayout>
+        <Border>
+            <VerticalStackLayout
+                Padding="18"
+                Spacing="8">
+                <Label
+                    Text="el indice de la masa corporal es: "/>
+                <Label
+                    Text="23.3232"
+                    HorizontalOptions="Center"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    x:Name="ImcLabel"/>
+                <Label
+                    Text="el estado nutricional de la persona es: "/>
+                <Label
+                    Text="peso normal"
+                    HorizontalOptions="Center"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    x:Name="EstadoNutricionalLabel"/>
+            </VerticalStackLayout>
+        </Border>
+    </VerticalStackLayout>
+    
+    
+</ContentPage>
