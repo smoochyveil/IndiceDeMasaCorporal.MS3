@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:Imc.Maui.ViewModels" x:DataType="viewmodels:MainViewModel"
              x:Class="Imc.Maui.Views.MainPage"
              Title="Indice de masa corporal">
 
@@ -15,12 +15,14 @@
                     Text="proporcione el peso en kilogramos: "/>
                 <Entry 
                     BackgroundColor="WhiteSmoke"
-                     x:Name="PesoEntry"/>
+                    TextColor="Black"
+                     Text="{Binding Path=Peso}"/>
                 <Label
                     Text="proporcione la complexion en metros: "/>
                 <Entry
                     BackgroundColor="WhiteSmoke"
-                       x:Name="AlturaEntry"/>
+                       Text="{Binding Path=Altura}"
+                    TextColor="Black"/>
             </VerticalStackLayout>            
         </Border>
         <HorizontalStackLayout
@@ -28,11 +30,12 @@
             HorizontalOptions="Center">
             <Button
                 Text="calcular"
-                BackgroundColor="Green"
-                Clicked="OnCalcularButtonClicked"/>
+                Command="{Binding Path=CalcularCommand}"
+                BackgroundColor="Green"/>
             <Button
                 Text="limpiar"
-                Clicked="OnLimpiarButtonClicked"/>
+                Command="{Binding Path=LimpiarCommand}"
+                />
 
         </HorizontalStackLayout>
         <Border>
@@ -42,19 +45,17 @@
                 <Label
                     Text="el indice de la masa corporal es: "/>
                 <Label
-                    Text="23.3232"
+                    Text="{Binding Path=Imc}"
                     HorizontalOptions="Center"
                     FontSize="Medium"
-                    FontAttributes="Bold"
-                    x:Name="ImcLabel"/>
+                    FontAttributes="Bold"/>
                 <Label
                     Text="el estado nutricional de la persona es: "/>
                 <Label
-                    Text="peso normal"
+                    Text="{Binding Path=EstadoNutricional}"
                     HorizontalOptions="Center"
                     FontSize="Medium"
-                    FontAttributes="Bold"
-                    x:Name="EstadoNutricionalLabel"/>
+                    FontAttributes="Bold"/>
             </VerticalStackLayout>
         </Border>
     </VerticalStackLayout>

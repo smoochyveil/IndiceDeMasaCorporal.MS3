@@ -30,7 +30,7 @@ namespace Imc.Maui.models
             {
                 return "Obesidad";
             }
-            return "Obesidad";
+            return "Obesidad morvida";
         } 
         }
     }
