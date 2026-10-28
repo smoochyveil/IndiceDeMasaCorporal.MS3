@@ -1,5 +1,3 @@
-
-using Imc.Maui.models;
 using Imc.Maui.ViewModels;
 
 namespace Imc.Maui.Views;

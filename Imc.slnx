@@ -1,3 +1,5 @@
 <Solution>
+  <Project Path="Imc.Consola/Imc.Consola.csproj" Id="6a55d388-b814-4da2-8a73-7fc7cfcf483b" />
   <Project Path="Imc.Maui/Imc.Maui.csproj" />
+  <Project Path="Imc.Model/Imc.Model.csproj" Id="51196607-1f81-48f9-84b0-c0ec17605135" />
 </Solution>

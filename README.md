@@ -1,0 +1,1 @@
+imc.netmauui es una aplicación que muestra el índice corporal y el índice de masa corporal
